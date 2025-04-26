@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrendSniper Pro - Find Winning Ads Instantly</title>
+  <title>TrendSniper Pro - Find Winning Ads & Products</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -13,72 +13,85 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #f0f2f5, #ffffff);
-      padding: 20px;
+      background: linear-gradient(to bottom right, #f5f7fa, #ffffff);
       color: #111;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px);}
+      100% { opacity: 1; transform: translateY(0);}
     }
     header {
       text-align: center;
       margin-bottom: 40px;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(10px); }
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #111;
       margin-bottom: 10px;
     }
     header p {
       font-size: 1.2rem;
       color: #555;
+      margin-bottom: 20px;
     }
     .btn {
       display: inline-block;
       background: #111;
       color: #fff;
       padding: 14px 28px;
-      margin-top: 20px;
+      margin-top: 10px;
       border-radius: 8px;
       font-size: 1rem;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
     .btn:hover {
       background: #333;
+      transform: translateY(-3px);
     }
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 40px;
+      animation: fadeIn 1.5s ease-in;
     }
     .feature {
       background: #fff;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
     }
     .feature:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     }
     .feature h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 10px;
       color: #111;
     }
     .feature p {
       font-size: 1rem;
-      color: #555;
+      color: #666;
     }
     .testimonial {
-      background: #ffffff;
-      padding: 30px;
       margin-top: 50px;
+      padding: 30px;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-      font-style: italic;
       text-align: center;
-      color: #333;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+      font-style: italic;
     }
     footer {
       text-align: center;
@@ -90,40 +103,40 @@
 </head>
 <body>
 
-  <header>
-    <h1>TrendSniper Pro</h1>
-    <p>Find Viral Ads & Winning Products Instantly. Scale Your Business.</p>
-    <a href="https://trendsniper.gumroad.com/l/uwbie" class="btn">Upgrade to Pro - Only $9</a>
-  </header>
+<header>
+  <h1>TrendSniper Pro</h1>
+  <p>Find Viral Ads. Discover Winning Products. Dominate Your Market.</p>
+  <a href="https://trendsniper.gumroad.com/l/uwbie" class="btn">Upgrade to Pro - Only $9</a>
+</header>
 
-  <section class="features">
-    <div class="feature">
-      <h3>Ad Scanner</h3>
-      <p>Instantly detect viral ad hooks, captions, promotions across Instagram, TikTok, Facebook.</p>
-    </div>
-    <div class="feature">
-      <h3>Winning Product Finder</h3>
-      <p>Find sold out, trending, and viral products automatically. Beat your competitors!</p>
-    </div>
-    <div class="feature">
-      <h3>CSV Export (Pro)</h3>
-      <p>Save ad scans and winning products into clean .csv files for your private research.</p>
-    </div>
-    <div class="feature">
-      <h3>Smart Platform Detection</h3>
-      <p>Knows if you're on Instagram, TikTok, or Facebook automatically. No setup needed.</p>
-    </div>
-  </section>
-
-  <div class="testimonial">
-    "In just 10 minutes, I found 5 viral products and 7 winning ads. <br> TrendSniper saved me hours of research!"
-    <br><br>
-    – Beta Tester
+<section class="features">
+  <div class="feature">
+    <h3>Ad Scanner</h3>
+    <p>Detect trending ads instantly from Instagram, TikTok, Facebook — no effort required!</p>
   </div>
+  <div class="feature">
+    <h3>Winning Product Finder</h3>
+    <p>Find hot selling products before your competitors. Stay 5 steps ahead in your niche!</p>
+  </div>
+  <div class="feature">
+    <h3>CSV Export (Pro)</h3>
+    <p>Download your discovered ads and products in clean .csv files ready for research.</p>
+  </div>
+  <div class="feature">
+    <h3>Platform Smart Tag</h3>
+    <p>Knows automatically if it's Instagram, TikTok or Facebook — making your scans smarter.</p>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 TrendSniper | Built for entrepreneurs by entrepreneurs.
-  </footer>
+<div class="testimonial">
+  "Using TrendSniper Pro, I found 7 viral products and launched a 5-figure store in 1 month!"
+  <br><br>
+  – Early User, 2025
+</div>
+
+<footer>
+  &copy; 2025 TrendSniper. All rights reserved.
+</footer>
 
 </body>
 </html>
