@@ -1,143 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrendSniper Pro Find Winning Ads & Products</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>TrendSniper - Find Winning Ads Fast</title>
+  <link rel="icon" href="icons/icon128.png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #f5f7fa, #ffffff);
-      color: #111;
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px);}
-      100% { opacity: 1; transform: translateY(0);}
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-      animation: float 4s ease-in-out infinite alternate;
-    }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(10px); }
-    }
-    header h1 {
-      font-size: 2.8rem;
-      color: #111;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .btn {
-      display: inline-block;
-      background: #111;
-      color: #fff;
-      padding: 14px 28px;
-      margin-top: 10px;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      background: #333;
-      transform: translateY(-3px);
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-      animation: fadeIn 1.5s ease-in;
-    }
-    .feature {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
-      transition: 0.3s;
-    }
-    .feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    }
-    .feature h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #111;
-    }
-    .feature p {
-      font-size: 1rem;
-      color: #666;
-    }
-    .testimonial {
-      margin-top: 50px;
-      padding: 30px;
-      background: #fff;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-      font-style: italic;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #777;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    header { background: #111; color: white; padding: 40px 20px; text-align: center; }
+    nav a { margin: 0 15px; color: #ccc; text-decoration: none; font-size: 14px; }
+    section { padding: 40px 20px; text-align: center; }
+    h1, h2 { margin-bottom: 20px; }
+    ul { text-align: left; display: inline-block; }
+    .action-btn { background: #111; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 20px; }
+    footer { background: #111; color: white; padding: 20px; text-align: center; font-size: 14px; margin-top: 40px; }
+    footer a { color: #aaa; margin: 0 10px; text-decoration: none; }
+    table { margin: 20px auto; border-collapse: collapse; width: 90%; max-width: 700px; }
+    table, th, td { border: 1px solid #ddd; }
+    th, td { padding: 15px; text-align: center; }
+    th { background: #111; color: white; }
   </style>
 </head>
-<body>
-<header>
-  <h1>TrendSniper Pro</h1>
-  <p>Find Viral Ads. Discover Winning Products. Dominate Your Market.</p>
-  
-  <a href="https://trendsniper.gumroad.com/l/rtzou" class="btn" style="margin-bottom: 10px;">Upgrade to Pro Only $9</a>
-  <br>
-  <a href="https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID" class="btn" style="background: #0077ff;">➕ Add TrendSniper to Chrome</a>
-</header>
-<section class="features">
-  <div class="feature">
-    <h3>Ad Scanner</h3>
-    <p>Detect trending ads instantly from Instagram, TikTok, Facebook  no effort required!</p>
-  </div>
-  <div class="feature">
-    <h3>Winning Product Finder</h3>
-    <p>Find hot selling products before your competitors. Stay 5 steps ahead in your niche!</p>
-  </div>
-  <div class="feature">
-    <h3>CSV Export (Pro)</h3>
-    <p>Download your discovered ads and products in clean .csv files ready for research.</p>
-  </div>
-  <div class="feature">
-    <h3>Platform Smart Tag</h3>
-    <p>Knows automatically if it's Instagram, TikTok or Facebook  making your scans smarter.</p>
-  </div>
-</section>
-
-<div class="testimonial">
-  Using TrendSniper Pro, I found 7 viral products and launched a 5-figure store in 1 month!
-  <br><br>
-  Early User, 2025
+<body><header>
+  <h1>TrendSniper</h1>
+  <p>Viral Ads & Winning Products in One Click.</p>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#comparison">Compare</a>
+    <a href="#about">About</a>
+  </nav>
+</header><section id="features">
+  <h2>Features</h2>
+  <ul>
+    <li>✅ Scan Viral Ads on TikTok, Facebook, and Instagram</li>
+    <li>✅ Find Winning Products Instantly</li>
+    <li>✅ Detect Top 10 Viral Keywords</li>
+    <li>✅ Download Results to CSV</li>
+    <li>✅ Save Favorite Ads (Pro Plus)</li>
+    <li>✅ Auto Export to Google Sheets (Pro Plus)</li>
+  </ul>
+  <a class="action-btn" href="#pricing">Get Started</a>
+</section><section id="pricing" style="background: #f9f9f9;">
+  <h2>Choose Your Plan</h2>
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;"><div style="background: white; border: 2px solid #eee; border-radius: 10px; padding: 30px; width: 300px;">
+  <h3>TrendSniper Pro</h3>
+  <p><strong>$9 One-Time</strong></p>
+  <ul>
+    <li>✅ Scan Viral Ads</li>
+    <li>✅ Find Winning Products</li>
+    <li>✅ Viral Keyword Detection</li>
+    <li>✅ CSV Download</li>
+    <li>✅ Lifetime Access</li>
+  </ul>
+  <a class="action-btn" href="https://trendsniper.gumroad.com/l/uwbie">Get Pro - $9</a>
 </div>
 
-<footer>
-  &copy; 2025 TrendSniper. All rights reserved.
-</footer>
+<div style="background: white; border: 2px solid #0077ff; border-radius: 10px; padding: 30px; width: 300px;">
+  <h3>TrendSniper Pro Plus</h3>
+  <p><strong>$7/month</strong></p>
+  <ul>
+    <li>✅ Everything in Pro</li>
+    <li>✅ Save Favorite Ads</li>
+    <li>✅ Auto Export to Google Sheets</li>
+    <li>✅ Priority Updates & Support</li>
+    <li>✅ Monthly Winning Product Reports</li>
+  </ul>
+  <a class="action-btn" href="#">Subscribe Pro Plus</a>
+</div>
 
-</body>
+  </div>
+</section><section id="comparison">
+  <h2>Compare Plans</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Pro</th>
+        <th>Pro Plus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Scan Viral Ads</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Find Winning Products</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Top Viral Keyword Detection</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Download CSV</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Save Favorite Ads</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Auto Export to Google Sheets</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Priority Updates & Support</td><td>❌</td><td>✅</td></tr>
+    </tbody>
+  </table>
+</section><section id="about" style="background: #f9f9f9;">
+  <h2>About TrendSniper</h2>
+  <p style="max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+    TrendSniper isn’t just another ad spy tool. It’s built for speed, simplicity, and winning.<br><br>
+    While other tools trap you in expensive monthly fees, complicated dashboards, and bloated features you don’t need, 
+    <strong>TrendSniper gives you exactly what matters — instantly.</strong><br><br>
+    - 1-click Ad Scanning across TikTok, Instagram, and Facebook.<br>
+    - Top Viral Keyword Detection to uncover winning trends.<br>
+    - Winning Products Finder to grab viral products before others.<br>
+    - Simple CSV Export to save and act fast.<br>
+    - One-Time Payment Option — no subscriptions, no stress.<br><br>
+    We believe every entrepreneur, dropshipper, and marketer deserves a tool that 
+    <strong>works fast, works clean, and works smart</strong>.<br><br>
+    <em>Fast. Simple. Smart. That’s TrendSniper.</em>
+  </p>
+</section><footer>
+  <p>&copy; 2025 TrendSniper. All rights reserved.</p>
+  <div style="margin-top: 10px;">
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </div>
+</footer></body>
 </html>
