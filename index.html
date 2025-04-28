@@ -6,48 +6,39 @@
   <title>TrendSniper - Find Winning Products Fast</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Base Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { height: 100%; scroll-behavior: smooth; font-family: 'Poppins', sans-serif; }
-    header { position: sticky; top: 0; background: white; z-index: 1000; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-weight: 700; font-size: 24px; color: #0077ff; }
-    .nav-links a { margin-left: 20px; color: #333; font-weight: 500; text-decoration: none; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
 
-    .hero { position: relative; height: 100vh; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.6); }
-    .hero h1 { font-size: 60px; margin-bottom: 20px; }
-    .hero p { font-size: 24px; margin-bottom: 30px; }
+    /* Header */
+    header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    header nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #0077ff; }
+    .nav-links a { margin-left: 20px; font-weight: 500; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 100px 20px; }
+    .hero h1 { font-size: 48px; color: #0077ff; margin-bottom: 20px; }
+    .hero p { font-size: 20px; margin-bottom: 30px; }
     .hero button {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      border: none; padding: 15px 30px; border-radius: 50px;
-      font-size: 18px; color: white; cursor: pointer; transition: 0.3s;
+      background: linear-gradient(135deg, #0077ff, #00d4ff);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
     }
     .hero button:hover { transform: scale(1.05); }
 
-    .motivation {
-      padding: 80px 20px;
-      background: #f0f6ff;
-      text-align: center;
-    }
-    .motivation h2 {
-      font-size: 40px;
-      color: #0077ff;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-      animation: glow 2s infinite alternate;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00c6ff; }
-      to { text-shadow: 0 0 20px #0072ff; }
-    }
-
-    .features, .pricing, .testimonials, .faq { padding: 80px 20px; text-align: center; }
-
-    .feature-cards, .testimonial-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-
-    .card, .testimonial {
+    /* Features */
+    .features { padding: 80px 20px; text-align: center; }
+    .features h2 { font-size: 36px; margin-bottom: 50px; }
+    .feature-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .card {
       background: white;
       padding: 30px;
       border-radius: 16px;
@@ -55,29 +46,36 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
-    .card:hover, .testimonial:hover { transform: translateY(-10px); }
+    .card:hover { transform: translateY(-10px); }
     .card h3 { margin-bottom: 15px; font-size: 22px; color: #0077ff; }
-    .stars { color: #ffcc00; margin: 10px 0; }
 
-    .price-box {
+    /* Testimonials */
+    .testimonials { padding: 80px 20px; background: #e6f0ff; text-align: center; }
+    .testimonials h2 { font-size: 36px; margin-bottom: 50px; }
+    .testimonial-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .testimonial {
+      background: white;
+      padding: 25px;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .stars { color: #ffcc00; margin: 10px 0; }
+    .testimonial p { font-style: italic; }
+
+    /* Pricing */
+    .pricing { padding: 80px 20px; text-align: center; }
+    .pricing h2 { font-size: 36px; margin-bottom: 20px; }
+    .pricing p { font-size: 20px; margin-bottom: 30px; }
+    .pricing .price {
       background: white;
       padding: 40px;
       border-radius: 20px;
       display: inline-block;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-    .price-box h3 {
-      font-size: 32px;
-      color: #0077ff;
-      margin-bottom: 10px;
-    }
-    .price-box .old-price {
-      text-decoration: line-through;
-      color: grey;
-      font-size: 20px;
-    }
-    .price-box button {
-      margin-top: 20px;
+    .price h3 { font-size: 32px; color: #0077ff; margin-bottom: 20px; }
+    .price button {
       background: #28a745;
       color: white;
       padding: 15px 30px;
@@ -87,119 +85,128 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    .price-box button:hover { transform: scale(1.05); }
+    .price button:hover { transform: scale(1.05); }
 
-    footer { padding: 20px; background: white; text-align: center; font-size: 14px; }
+    /* FAQ */
+    .faq { padding: 80px 20px; text-align: center; }
+    .faq h2 { font-size: 36px; margin-bottom: 40px; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h4 { font-size: 20px; color: #0077ff; margin-bottom: 10px; }
+    .faq-item p { font-size: 18px; }
+
+    /* Footer */
+    footer { padding: 30px 20px; text-align: center; font-size: 14px; background: white; margin-top: 50px; }
   </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<header>
-  <nav class="container">
-    <div class="logo">TrendSniper</div>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#faq">FAQ</a>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">TrendSniper</div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
     </div>
-  </nav>
-</header>
+  </header>
 
-<!-- Hero -->
-<section class="hero">
-  <video autoplay muted loop>
-    <source src="https://cdn.pixabay.com/vimeo/774203162/supermarket-144055.mp4?width=640&hash=30b16e5a98f500b18c1184f0346c9e17a34724ec" type="video/mp4">
-  </video>
-  <h1>Find Winning Products in Minutes</h1>
-  <p>Stop guessing. Start dominating. Real-time access to top trends!</p>
-  <button>Add to Chrome</button>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Find Winning Products in Minutes</h1>
+    <p>Stop guessing. Start scaling. Get real-time access to the best trending products today!</p>
+    <button>Get Started Now</button>
+  </section>
 
-<!-- Motivation -->
-<section class="motivation">
-  <h2>Become the Hunter. Not the Hunted. Lead the Trends!</h2>
-</section>
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Why Choose TrendSniper?</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <h3>Instant Product Discovery</h3>
+          <p>Get instant access to hot-selling products updated daily. No more endless research.</p>
+        </div>
+        <div class="card">
+          <h3>Affordable Pricing</h3>
+          <p>Pay just $9.99/month for premium access. Unbeatable value compared to expensive spy tools.</p>
+        </div>
+        <div class="card">
+          <h3>Simple & Clean UI</h3>
+          <p>Easy-to-use interface with no clutter. Find your next winner in just a few clicks!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Features -->
-<section class="features" id="features">
-  <h2>Why TrendSniper?</h2>
-  <div class="feature-cards">
-    <div class="card">
-      <h3>Instant Product Discovery</h3>
-      <p>Hot-selling products updated daily. No endless research anymore.</p>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Users Are Saying</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p>"TrendSniper helped me scale my store to $30k/month!"</p>
+          <div class="stars">★★★★★</div>
+          <h4>- Sarah K.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Simple, affordable, and extremely effective."</p>
+          <div class="stars">★★★★★</div>
+          <h4>- David O.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Found 2 winning products within a week of using!"</p>
+          <div class="stars">★★★★★</div>
+          <h4>- Ella P.</h4>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>Affordable Price</h3>
-      <p>Just $9.99/month — Crossed from $15! Best value in the market.</p>
-    </div>
-    <div class="card">
-      <h3>Super Easy to Use</h3>
-      <p>Clean dashboard. Find your next winner with 3 clicks.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Pricing -->
-<section class="pricing" id="pricing">
-  <h2>Get Started Today</h2>
-  <div class="price-box">
-    <div class="old-price">$15</div>
-    <h3>Now $9.99/month</h3>
-    <button>Subscribe Now</button>
-  </div>
-</section>
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>Get Started Today</h2>
+      <p>Access winning products for just</p>
+      <div class="price">
+        <h3>$9.99/month</h3>
+        <button>Subscribe Now</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-  <h2>Real User Reviews</h2>
-  <div class="testimonial-cards">
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>"Found 3 winning products my first week! $10k month now."</p>
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4>How often are products updated?</h4>
+        <p>New trending products are added every 24 hours!</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I cancel anytime?</h4>
+        <p>Yes! You can cancel your subscription anytime from your account dashboard.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need any experience?</h4>
+        <p>Nope! TrendSniper is beginner-friendly and very easy to use.</p>
+      </div>
     </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>"Finally a product research tool that’s actually affordable."</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>"TrendSniper is the future of e-commerce."</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>"I canceled my expensive spy tools after using TrendSniper."</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>"10/10 — Best $10 I spent for my business."</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <h4>How fast are products updated?</h4>
-    <p>New hot products added every 24 hours!</p>
-  </div>
-  <div class="faq-item">
-    <h4>Can I cancel anytime?</h4>
-    <p>Yes! 1-click cancel anytime from dashboard.</p>
-  </div>
-  <div class="faq-item">
-    <h4>Is it beginner-friendly?</h4>
-    <p>100%! Even if it’s your first store ever.</p>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  © 2025 TrendSniper. All rights reserved.
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TrendSniper. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
+
+
+Yes with this landing 
+And also add 5 reviews with star and also make the landing page super attractive 
