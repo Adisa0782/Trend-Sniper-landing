@@ -1,107 +1,53 @@
-u<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TrendSniper - Find Winning Products Fast</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrendSniper - Find Winning Products</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Base Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #333; }
-    a { text-decoration: none; color: inherit; }
-    .container { width: 90%; max-width: 1200px; margin: auto; }
+    body { font-family: 'Poppins', sans-serif; background: #f7faff; color: #111; line-height: 1.6; }
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 700; color: #0077ff; }
+.nav-links a { margin-left: 20px; text-decoration: none; font-weight: 500; color: #333; }
 
-    /* Header */
-    header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    header nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 24px; font-weight: 700; color: #0077ff; }
-    .nav-links a { margin-left: 20px; font-weight: 500; }
+.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #0077ff, #00d4ff); color: white; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.hero button {
+  background: white; color: #0077ff;
+  padding: 15px 30px; border: none;
+  border-radius: 50px; font-size: 18px;
+  cursor: pointer; font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.hero button:hover { background: #f1f1f1; }
 
-    /* Hero */
-    .hero { text-align: center; padding: 100px 20px; }
-    .hero h1 { font-size: 48px; color: #0077ff; margin-bottom: 20px; }
-    .hero p { font-size: 20px; margin-bottom: 30px; }
-    .hero button {
-      background: linear-gradient(135deg, #0077ff, #00d4ff);
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .hero button:hover { transform: scale(1.05); }
+.section-title { text-align: center; font-size: 32px; margin: 60px 0 30px; }
+.cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+.card {
+  background: white; padding: 30px; border-radius: 12px;
+  width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+.card h3 { color: #0077ff; margin-bottom: 10px; font-size: 20px; }
+.card p { font-size: 16px; }
 
-    /* Features */
-    .features { padding: 80px 20px; text-align: center; }
-    .features h2 { font-size: 36px; margin-bottom: 50px; }
-    .feature-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      width: 300px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .card:hover { transform: translateY(-10px); }
-    .card h3 { margin-bottom: 15px; font-size: 22px; color: #0077ff; }
+.benefits { background: #eaf4ff; padding: 60px 20px; }
+.benefits ul { max-width: 700px; margin: auto; font-size: 18px; }
+.benefits li { margin-bottom: 15px; }
 
-    /* Testimonials */
-    .testimonials { padding: 80px 20px; background: #e6f0ff; text-align: center; }
-    .testimonials h2 { font-size: 36px; margin-bottom: 50px; }
-    .testimonial-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-    .testimonial {
-      background: white;
-      padding: 25px;
-      width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .stars { color: #ffcc00; margin: 10px 0; }
-    .testimonial p { font-style: italic; }
+.testimonials, .pricing, .faq, footer { padding: 60px 20px; text-align: center; }
+.testimonial, .price-plan { background: white; border-radius: 10px; padding: 25px; margin: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.stars { color: #ffcc00; margin: 10px 0; font-size: 20px; }
+.price-plan h3 { color: #0077ff; }
+.price-plan ul { text-align: left; margin-top: 15px; }
 
-    /* Pricing */
-    .pricing { padding: 80px 20px; text-align: center; }
-    .pricing h2 { font-size: 36px; margin-bottom: 20px; }
-    .pricing p { font-size: 20px; margin-bottom: 30px; }
-    .pricing .price {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      display: inline-block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .price h3 { font-size: 32px; color: #0077ff; margin-bottom: 20px; }
-    .price button {
-      background: #28a745;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .price button:hover { transform: scale(1.05); }
+footer { font-size: 14px; background: #fff; color: #555; }
 
-    /* FAQ */
-    .faq { padding: 80px 20px; text-align: center; }
-    .faq h2 { font-size: 36px; margin-bottom: 40px; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-item h4 { font-size: 20px; color: #0077ff; margin-bottom: 10px; }
-    .faq-item p { font-size: 18px; }
-
-    /* Footer */
-    footer { padding: 30px 20px; text-align: center; font-size: 14px; background: white; margin-top: 50px; }
   </style>
 </head>
-
 <body>
-
-  <!-- Header -->
   <header>
     <div class="container">
       <nav>
@@ -109,156 +55,78 @@ u<!DOCTYPE html>
         <div class="nav-links">
           <a href="#">Home</a>
           <a href="#features">Features</a>
+          <a href="#benefits">Benefits</a>
           <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
         </div>
       </nav>
     </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Find Winning Products in Minutes</h1>
-    <p>Stop guessing. Start scaling. Get real-time access to the best trending products today!</p>
-    <button>ADD To Chrome</button>
-  </section>
-
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="container">
-      <h2>Why Choose TrendSniper?</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <h3>Instant Product Discovery</h3>
-          <p>Get instant access to hot-selling products updated daily. No more endless research.</p>
-        </div>
-        <div class="card">
-          <h3>Affordable Pricing</h3>
-          <p>Pay just $9.99/month for premium access. Unbeatable value compared to expensive spy tools.</p>
-        </div>
-        <div class="card">
-          <h3>Simple & Clean UI</h3>
-          <p>Easy-to-use interface with no clutter. Find your next winner in just a few clicks!</p>
-        </div>
+  </header>  <section class="hero">
+    <h1>Find Winning Products Fast</h1>
+    <p>The easiest Chrome extension to detect viral ads & products on Instagram, TikTok, and Facebook.</p>
+    <button>➕ Add to Chrome</button>
+  </section>  <section class="features container" id="features">
+    <h2 class="section-title">Powerful Features</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Platform Detector</h3>
+        <p>Automatically identifies if an ad is from TikTok, Instagram, or Facebook.</p>
+      </div>
+      <div class="card">
+        <h3>Urgency Word Scanner</h3>
+        <p>Highlights emotional triggers like “Only Today”, “Last Chance” and “Hurry!”.</p>
+      </div>
+      <div class="card">
+        <h3>Winning Product Tags</h3>
+        <p>Find and tag hot ads with phrases like “Sold Out” or “Trending”.</p>
       </div>
     </div>
-  </section>
-
- <section id="testimonials" style="padding: 50px 20px; background: #f0f6ff; text-align: center;">
-  <h2 style="font-size: 32px; margin-bottom: 40px;">What Our Users Say</h2>
-
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
-
-    <!-- Review 1 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">TrendSniper helped me find 3 viral products in one week! My store finally blew up.</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">Sarah K., Dropshipper</h4>
-    </div>
-
-    <!-- Review 2 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">Simple, powerful, and saves me hours daily. Best $9.99 I've ever spent!</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">David O., Ecom Entrepreneur</h4>
-    </div>
-
-    <!-- Review 3 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">I was tired of wasting money on spy tools. TrendSniper just works. Fast and clean!</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">Jasmine R., Agency Owner</h4>
-    </div>
-
-    <!-- New Review 4 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">Found a $100k winner thanks to TrendSniper. Way better than expensive spy tools.</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">Kevin M., Online Marketer</h4>
-    </div>
-
-    <!-- New Review 5 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">Love how simple it is! No confusing dashboards. Just results.</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">Ella P., Shopify Owner</h4>
-    </div>
-
-    <!-- New Review 6 -->
-    <div style="background: white; padding: 25px; width: 300px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <p style="font-size: 16px; font-style: italic;">I made my subscription money back within 2 days of using it. Incredible tool.</p>
-      <div style="color: #ffcc00; margin-top: 10px;">★★★★★</div>
-      <h4 style="margin-top: 10px; color: #0077ff;">James W., Affiliate Marketer</h4>
-    </div>
-
-  </div>
-</section>
-
-<section id="pricing" style="padding: 60px 20px; background: #f9f9f9; text-align: center;">
-  <h2 style="font-size: 36px; margin-bottom: 30px;">Choose Your Plan</h2>
-  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-
-    <!-- Lite Plan -->
-    <div style="background: white; border: 2px solid #eee; border-radius: 12px; padding: 40px 30px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-      <h3 style="font-size: 24px; margin-bottom: 10px;">TrendSniper Lite</h3>
-      <p style="font-size: 16px; color: gray; margin-bottom: 5px;">
-        <span style="text-decoration: line-through;">10 USD</span>
-      </p>
-      <p style="font-size: 32px; font-weight: bold; color: #00aa55; margin-bottom: 20px;">$7.99/mo</p>
-      <ul style="text-align: left; font-size: 16px; margin-bottom: 20px;">
-        <li>✅ Scan Viral Ads</li>
-        <li>✅ Find Winning Products</li>
-      </ul>
-      <a href="YOUR_CHROME_EXTENSION_LINK_HERE" 
-         style="display: inline-block; padding: 12px 20px; background: #0077ff; color: white; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">
-        ➡️ UPGRADE TO Lite 
-      </a>
-    </div>
-
-    <!-- Ultimate Plan -->
-    <div style="background: white; border: 2px solid #0077ff; border-radius: 12px; padding: 40px 30px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <h3 style="font-size: 24px; margin-bottom: 10px; color: #0077ff;">TrendSniper Ultimate</h3>
-      <p style="font-size: 16px; color: gray; margin-bottom: 5px;">
-        <span style="text-decoration: line-through;">15 USD</span>
-      </p>
-      <p style="font-size: 32px; font-weight: bold; color: #0077ff; margin-bottom: 20px;">$9.99/mo</p>
-      <ul style="text-align: left; font-size: 16px; margin-bottom: 20px;">
-        <li>✅ Everything in Lite</li>
-        <li>✅ Viral Keyword Detection</li>
-        <li>✅ Download CSV Results</li>
-        <li>✅ Save Favorite Ads</li>
-        <li>✅ Auto Export to Sheets</li>
-        <li>✅ Priority Support</li>
-      </ul>
-      <a href="YOUR_CHROME_EXTENSION_LINK_HERE" 
-         style="display: inline-block; padding: 12px 20px; background: #00aa55; color: white; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">
-        ➡️ UPGRADE TO ultimate 
-      </a>
-    </div>
-
-  </div>
-</section>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <h4>How often are products updated?</h4>
-        <p>New trending products are added every 24 hours!</p>
+  </section>  <section class="benefits" id="benefits">
+    <h2 class="section-title">Why People Love TrendSniper</h2>
+    <ul>
+      <li>✅ Save hours of research — scan ads with one click</li>
+      <li>✅ Detect emotional selling tactics used by top brands</li>
+      <li>✅ Download & export your findings as CSV instantly</li>
+      <li>✅ Favorite & revisit powerful ad creatives</li>
+      <li>✅ Real-time scanning with no guesswork</li>
+    </ul>
+  </section>  <section class="testimonials">
+    <h2 class="section-title">What People Are Saying</h2>
+    <div class="cards">
+      <div class="testimonial">
+        <p>“TrendSniper helped me find 3 viral products in one week. Game changer!”</p>
+        <div class="stars">★★★★★</div>
+        <strong>— Sarah, Shopify Seller</strong>
       </div>
-      <div class="faq-item">
-        <h4>Can I cancel anytime?</h4>
-        <p>Yes! You can cancel your subscription anytime from your account dashboard.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Do I need any experience?</h4>
-        <p>Nope! TrendSniper is beginner-friendly and very easy to use.</p>
+      <div class="testimonial">
+        <p>“Super clean UI. I canceled all other tools. This does everything.”</p>
+        <div class="stars">★★★★★</div>
+        <strong>— Kevin, Facebook Ads Expert</strong>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 TrendSniper. All rights reserved.</p>
+  </section>  <section class="pricing" id="pricing">
+    <h2 class="section-title">Choose Your Plan</h2>
+    <div class="cards">
+      <div class="price-plan">
+        <h3>Lite Plan</h3>
+        <p><s>$10</s> <strong style="color:green">$7.99/mo</strong></p>
+        <ul>
+          <li>✅ Scan ads</li>
+          <li>✅ Detect viral keywords</li>
+        </ul>
+      </div>
+      <div class="price-plan">
+        <h3>Ultimate Plan</h3>
+        <p><s>$15</s> <strong style="color:#0077ff">$9.99/mo</strong></p>
+        <ul>
+          <li>✅ Everything in Lite</li>
+          <li>✅ Save Favorites</li>
+          <li>✅ Download CSV</li>
+          <li>✅ Auto Export to Google Sheets</li>
+        </ul>
+      </div>
+    </div>
+  </section>  <footer>
+    <p>© 2025 TrendSniper. Built with love and data.</p>
   </footer>
+</body>
+  </html>
