@@ -9,7 +9,14 @@ header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.
 header nav { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 24px; font-weight: 700; color: #0077ff; }
 .nav-links a { margin-left: 20px; font-weight: 500; }
-
+.hero-image img {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 /* Hero */
 .hero { text-align: center; padding: 100px 20px; }
 .hero h1 { font-size: 48px; color: #0077ff; margin-bottom: 20px; }
