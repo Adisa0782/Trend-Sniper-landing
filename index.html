@@ -1,263 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TrendSniper - Find Winning Products Fast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Base Styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #333; }
-    a { text-decoration: none; color: inherit; }
-    .container { width: 90%; max-width: 1200px; margin: auto; }
-
-    /* Header */
-    header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    header nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 24px; font-weight: 700; color: #0077ff; }
-    .nav-links a { margin-left: 20px; font-weight: 500; }
-
-    /* Hero */
-    .hero { text-align: center; padding: 100px 20px; }
-    .hero h1 { font-size: 48px; color: #0077ff; margin-bottom: 20px; }
-    .hero p { font-size: 20px; margin-bottom: 30px; }
-    .hero button {
-      background: linear-gradient(135deg, #0077ff, #00d4ff);
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .hero button:hover { transform: scale(1.05); }
-
-    /* Features */
-    .features { padding: 80px 20px; text-align: center; }
-    .features h2 { font-size: 36px; margin-bottom: 50px; }
-    .feature-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      width: 300px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .card:hover { transform: translateY(-10px); }
-    .card h3 { margin-bottom: 15px; font-size: 22px; color: #0077ff; }
-
-    /* Testimonials */
-    .testimonials { padding: 80px 20px; background: #e6f0ff; text-align: center; }
-    .testimonials h2 { font-size: 36px; margin-bottom: 50px; }
-    .testimonial-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-    .testimonial {
-      background: white;
-      padding: 25px;
-      width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .stars { color: #ffcc00; margin: 10px 0; }
-    .testimonial p { font-style: italic; }
-
-    /* Pricing */
-    .pricing { padding: 80px 20px; text-align: center; }
-    .pricing h2 { font-size: 36px; margin-bottom: 20px; }
-    .pricing p { font-size: 20px; margin-bottom: 30px; }
-    .pricing .price {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      display: inline-block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .price h3 { font-size: 32px; color: #0077ff; margin-bottom: 20px; }
-    .price button {
-      background: #28a745;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .price button:hover { transform: scale(1.05); }
-
-    /* FAQ */
-    .faq { padding: 80px 20px; text-align: center; }
-    .faq h2 { font-size: 36px; margin-bottom: 40px; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-item h4 { font-size: 20px; color: #0077ff; margin-bottom: 10px; }
-    .faq-item p { font-size: 18px; }
-
-    /* Footer */
-    footer { padding: 30px 20px; text-align: center; font-size: 14px; background: white; margin-top: 50px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendSniper - Discover Winning Products & Ads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header class="hero">
+        <h1>TrendSniper</h1>
+        <p>Discover Winning Products and Ads Instantly with AI</p>
+        <a href="#start" class="cta-button">Start Scanning Free</a>
+        <p class="small-text">No credit card required</p>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">TrendSniper</div>
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+    <section class="features">
+        <h2>Why TrendSniper?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Pro CSV Export</h3>
+                <p>Download your results easily.</p>
+            </div>
+            <div class="feature-card">
+                <h3>AI Explanations</h3>
+                <p>Detailed insights & confidence scores.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Niche Filter</h3>
+                <p>Focus on your category of choice.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Leaderboard</h3>
+                <p>See the top winning products.</p>
+            </div>
         </div>
-      </nav>
-    </div>
-  </header>
+    </section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Find Winning Products in Minutes</h1>
-    <p>Stop guessing. Start scaling. Get real-time access to the best trending products today!</p>
-    <button>ADD To Chrome</button>
-  </section>
-
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="container">
-      <h2>Why Choose TrendSniper?</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <h3>Instant Product Discovery</h3>
-          <p>Get instant access to hot-selling products updated daily. No more endless research.</p>
+    <section class="proof">
+        <h2>Trusted by 2800+ Dropshippers & Ad Marketers</h2>
+        <div class="logos">
+            <img src="assets/logo1.png" alt="Logo 1">
+            <img src="assets/logo2.png" alt="Logo 2">
+            <img src="assets/logo3.png" alt="Logo 3">
+            <img src="assets/logo4.png" alt="Logo 4">
         </div>
-        <div class="card">
-          <h3>Affordable Pricing</h3>
-          <p>Pay just $9.99/month for premium access. Unbeatable value compared to expensive spy tools.</p>
-        </div>
-        <div class="card">
-          <h3>Simple & Clean UI</h3>
-          <p>Easy-to-use interface with no clutter. Find your next winner in just a few clicks!</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials" id="testimonials">
-    <h2>What Our Users Say</h2>
+    <section class="results">
+        <h2>See It In Action</h2>
+        <img src="assets/results-screenshot.png" alt="TrendSniper Results">
+    </section>
 
-    <div class="testimonial-cards">
-      <!-- Review 1 -->
-      <div class="testimonial">
-        <p>"TrendSniper helped me find 3 viral products in one week! My store finally blew up."</p>
-        <div class="stars">★★★★★</div>
-        <h4>Sarah K., Dropshipper</h4>
-      </div>
+    <section class="pricing" id="start">
+        <h2>Get Started</h2>
+        <p>Join TrendSniper for just $10/month, or try our limited free scan.</p>
+        <a href="#" class="cta-button">Upgrade to Pro</a>
+    </section>
 
-      <!-- Review 2 -->
-      <div class="testimonial">
-        <p>"Simple, powerful, and saves me hours daily. Best $9.99 I've ever spent!"</p>
-        <div class="stars">★★★★★</div>
-        <h4>David O., Ecom Entrepreneur</h4>
-      </div>
-
-      <!-- Review 3 -->
-      <div class="testimonial">
-        <p>"I was tired of wasting money on spy tools. TrendSniper just works. Fast and clean!"</p>
-        <div class="stars">★★★★★</div>
-        <h4>Jasmine R., Agency Owner</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section class="pricing" id="pricing">
-    <h2>Choose Your Plan</h2>
-    <p>Find the perfect plan for you. Start at just $7.99/month for TrendSniper Lite!</p>
-    <div class="container">
-      <div class="price">
-        <h3>TrendSniper Lite</h3>
-        <p><s>$10.00</s> $7.99/mo</p>
-        <ul>
-          <li>✅ Scan Viral Ads</li>
-          <li>✅ Find Winning Products</li>
-        </ul>
-        <button>Upgrade to Lite</button>
-      </div>
-
-      <div class="price">
-        <h3>TrendSniper Ultimate</h3>
-        <p><s>$15.00</s> $9.99/mo</p>
-        <ul>
-          <li>✅ Everything in Lite</li>
-          <li>✅ Viral Keyword Detection</li>
-          <li>✅ Download CSV Results</li>
-          <li>✅ Save Favorite Ads</li>
-          <li>✅ Auto Export to Sheets</li>
-          <li>✅ Priority Support</li>
-        </ul>
-        <a href="https://trendsniper.gumroad.com/l/rtzou" target="_blank">
-  <button>Upgrade to Ultimate</button>
-        </a>
-      </div>
-    </div>
-  </section>
-<section id="why-trendsniper" style="padding: 80px 20px; background: #f9fbff; text-align: center;">
-  <div class="container">
-    <h2 style="font-size: 36px; margin-bottom: 40px; color: #0077ff;">Why TrendSniper Beats the Competition</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;"><div style="background: white; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h3 style="color: #111; margin-bottom: 10px;">Blazing Fast & Simple</h3>
-    <p>Scan any TikTok, Instagram, or Facebook page in seconds. No learning curve.</p>
-  </div>
-
-  <div style="background: white; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h3 style="color: #111; margin-bottom: 10px;">Live Page Scanning</h3>
-    <p>Unlike others, we detect fresh viral content directly from the page you're on.</p>
-  </div>
-
-  <div style="background: white; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h3 style="color: #111; margin-bottom: 10px;">Affordable</h3>
-    <p>Just $7.99–$9.99/month vs. competitors charging $49–$199/month.</p>
-  </div>
-
-  <div style="background: white; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h3 style="color: #111; margin-bottom: 10px;">Built for Dropshippers</h3>
-    <p>100% focused on helping you find viral products & ads fast — nothing more, nothing less.</p>
-  </div>
-
-  <div style="background: white; padding: 30px; border-radius: 12px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h3 style="color: #111; margin-bottom: 10px;">Favorites + CSV Export</h3>
-    <p>Save & download winning products instantly — most tools charge extra for this.</p>
-  </div>
-
-</div>
-
-  </div>
-</section>
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>How often are products updated?</h4>
-      <p>New trending products are added every 24 hours!</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can I cancel anytime?</h4>
-      <p>Yes! You can cancel your subscription anytime from your account dashboard.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Do I need any experience?</h4>
-      <p>Nope! TrendSniper is beginner-friendly and very easy to use.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 TrendSniper. All rights reserved.</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 TrendSniper. All rights reserved.</p>
+        <p><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Contact</a></p>
+    </footer>
 </body>
 </html>
-      
