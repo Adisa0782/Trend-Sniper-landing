@@ -1,58 +1,203 @@
 /* Base Styles */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background: #f0f6ff; color: #333; line-height: 1.6; }
-a { text-decoration: none; color: inherit; }
-.container { width: 90%; max-width: 1200px; margin: auto; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f6f7fc;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
 /* Header */
-header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-header nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 24px; font-weight: 700; color: #0077ff; }
-.nav-links a { margin-left: 20px; font-weight: 500; }
-.hero-image img {
-  width: 100%;
+header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f2b900; /* Gold */
+}
+.nav-links a {
+  margin-left: 25px;
+  font-weight: 600;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+.nav-links a:hover {
+  color: #f2b900;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: #1d2536; /* Dark Navy */
+  color: #fff;
+}
+.hero h1 {
+  font-size: 60px;
+  color: #f2b900; /* Gold */
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
   max-width: 800px;
-  margin: 40px auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-left: auto;
+  margin-right: auto;
 }
-/* Hero */
-.hero { text-align: center; padding: 100px 20px; }
-.hero h1 { font-size: 48px; color: #0077ff; margin-bottom: 20px; }
-.hero p { font-size: 20px; margin-bottom: 30px; }
 .hero button {
-  background: linear-gradient(135deg, #0077ff, #00d4ff);
-  color: white; padding: 15px 30px;
-  border: none; border-radius: 50px;
-  font-size: 18px; cursor: pointer; transition: 0.3s;
+  background: linear-gradient(135deg, #f2b900, #00d4ff);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.hero button:hover { transform: scale(1.05); }
+.hero button:hover {
+  transform: scale(1.05);
+}
 
 /* Section & Cards */
-.section { padding: 80px 20px; text-align: center; }
-.section h2 { font-size: 36px; margin-bottom: 40px; color: #0077ff; }
-.features, .testimonials, .pricing, .faq { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-.card {
-  background: white; padding: 25px; border-radius: 12px; width: 300px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.3s;
+.section {
+  padding: 100px 20px;
+  text-align: center;
 }
-.card:hover { transform: translateY(-10px); }
-.card h3 { margin-bottom: 15px; font-size: 20px; color: #0077ff; }
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1d2536; /* Dark Navy */
+}
+.features,
+.testimonials,
+.pricing,
+.faq {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #1d2536;
+}
+.card p {
+  color: #777;
+}
 
 /* Testimonials */
-.stars { color: #ffcc00; margin: 10px 0; font-size: 20px; }
+.stars {
+  color: #ffcc00; /* Gold */
+  margin: 10px 0;
+  font-size: 22px;
+}
+.testimonial p {
+  font-style: italic;
+  color: #555;
+}
 
 /* Pricing */
-.plan { background: white; padding: 30px; border-radius: 12px; width: 280px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.plan h3 { font-size: 24px; color: #0077ff; margin-bottom: 10px; }
-.plan p { font-size: 20px; margin-bottom: 20px; }
-.plan ul { text-align: left; margin: 10px 0 20px 20px; }
-.plan button {
-  background: #28a745; color: white; padding: 12px 25px;
-  border: none; border-radius: 30px; font-size: 16px; cursor: pointer; transition: 0.3s;
+.plan {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-.plan button:hover { transform: scale(1.05); }
+.plan h3 {
+  font-size: 28px;
+  color: #f2b900; /* Gold */
+  margin-bottom: 20px;
+}
+.plan p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.plan ul {
+  text-align: left;
+  margin: 10px 0 20px 20px;
+  color: #333;
+}
+.plan button {
+  background: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.plan button:hover {
+  transform: scale(1.05);
+}
 
 /* Footer */
-footer { padding: 30px 20px; text-align: center; font-size: 14px; background: white; margin-top: 50px; }
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  background: #1d2536;
+  color: #fff;
+  margin-top: 50px;
+}
+footer a {
+  color: #f2b900;
+  font-weight: 600;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .features,
+  .testimonials,
+  .pricing,
+  .faq {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+}
