@@ -158,4 +158,47 @@ button:hover {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 769px) {
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex !important; /* Always show nav links on desktop */
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+  }
+
+  .nav-links a {
+    padding: 0 10px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .hero-img {
+    max-width: 50%;
+    margin-top: 0;
+  }
     }
