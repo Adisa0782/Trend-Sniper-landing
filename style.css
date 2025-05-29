@@ -1,59 +1,113 @@
 /* Base Styles */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background: #f4f4f9; color: #333; line-height: 1.6; }
-a { text-decoration: none; color: inherit; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: #ffcc00; }
 .container { width: 90%; max-width: 1200px; margin: auto; }
 
 /* Header */
-header { background: #1a1a2e; color: #f4f4f9; padding: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-header nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 28px; font-weight: 700; color: gold; }
-.nav-links a { margin-left: 20px; font-weight: 500; color: #f4f4f9; transition: 0.3s; }
-.nav-links a:hover { color: gold; }
+header {
+  background: #111;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+header nav {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo {
+  font-size: 24px; font-weight: 700; color: #ffcc00;
+}
+.nav-links a {
+  margin-left: 20px; font-weight: 500; color: #fff;
+}
+.nav-links a:hover {
+  color: #ffcc00;
+}
 
 /* Hero */
-.hero { text-align: center; padding: 120px 20px; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #f4f4f9; }
-.hero h1 { font-size: 50px; margin-bottom: 20px; }
-.hero p { font-size: 20px; margin-bottom: 30px; }
-.hero button {
-  background: gold; color: #1a1a2e; padding: 15px 30px;
-  border: none; border-radius: 50px; font-size: 18px; cursor: pointer;
-  transition: 0.3s; font-weight: 600;
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: url('assets/hero-image.jpg') no-repeat center/cover;
+  color: #fff;
 }
-.hero button:hover { background: #ffd700; transform: scale(1.05); }
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+}
+.hero p { font-size: 22px; margin-bottom: 30px; }
+.hero button {
+  background: linear-gradient(135deg, #ffcc00, #ffaa00);
+  color: #000;
+  padding: 15px 35px;
+  border: none; border-radius: 50px;
+  font-size: 20px; cursor: pointer;
+  transition: 0.3s;
+}
+.hero button:hover { transform: scale(1.1); }
 
-/* Section */
-.section { padding: 80px 20px; text-align: center; }
-.section h2 { font-size: 36px; margin-bottom: 40px; color: #1a1a2e; }
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #ffcc00;
+}
 
-/* Features & Cards */
-.features, .testimonials, .pricing, .faq { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+/* Cards */
+.features, .testimonials, .pricing, .faq {
+  display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;
+}
 .card {
-  background: white; padding: 30px; border-radius: 16px; width: 280px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1); transition: 0.3s;
+  background: #222;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
 .card:hover { transform: translateY(-10px); }
-.card h3 { margin-bottom: 15px; font-size: 20px; color: #16213e; font-weight: 600; }
+.card h3 { color: #ffcc00; margin-bottom: 10px; }
+.card p { color: #ccc; }
 
 /* Testimonials */
-.stars { color: gold; margin: 10px 0; font-size: 20px; }
+.stars { color: #ffcc00; font-size: 20px; margin: 10px 0; }
 
 /* Pricing */
-.plan { background: #fff; padding: 30px; border-radius: 16px; width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-.plan h3 { font-size: 24px; color: #16213e; margin-bottom: 10px; font-weight: 600; }
-.plan p { font-size: 20px; margin-bottom: 20px; color: #333; }
-.plan ul { text-align: left; margin: 10px 0 20px 20px; color: #333; }
-.plan button {
-  background: #16213e; color: gold; padding: 12px 25px;
-  border: none; border-radius: 30px; font-size: 16px; cursor: pointer;
-  transition: 0.3s; font-weight: 600;
+.plan {
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  width: 280px;
 }
-.plan button:hover { background: #1a1a2e; color: #ffd700; transform: scale(1.05); }
-
-/* FAQ */
-.faq-item { background: white; padding: 20px; border-radius: 12px; width: 300px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-.faq-item h4 { font-size: 18px; color: #16213e; margin-bottom: 10px; font-weight: 600; }
+.plan h3 { font-size: 26px; color: #ffcc00; }
+.plan p { font-size: 20px; margin-bottom: 20px; }
+.plan button {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.plan button:hover { transform: scale(1.1); }
 
 /* Footer */
-footer { background: #1a1a2e; color: #f4f4f9; padding: 30px 20px; text-align: center; font-size: 14px; margin-top: 50px; }
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 50px;
+}
