@@ -9,7 +9,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-
+function toggleMenu() {
+  const menu = document.getElementById('hamburgerMenu');
+  if (menu.style.display === 'flex') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'flex';
+  }
+}
 // Add a little hover effect to the hero button
 const heroButton = document.querySelector('.hero button');
 if (heroButton) {
