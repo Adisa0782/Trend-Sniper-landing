@@ -1,8 +1,3 @@
-// Toggle mobile menu
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-}
 
 // Smooth scroll for nav links
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -20,3 +15,13 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     document.querySelector('.nav-links').classList.remove('active');
   });
 });
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.querySelector('.menu-icon');
+    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+      menuIcon.textContent = '✖'; // Change to X
+    } else {
+      menuIcon.textContent = '☰'; // Revert back
+    }
+  }
