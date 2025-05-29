@@ -1,23 +1,22 @@
-// Full JavaScript for TrendSniper landing page
-
-// Toggle navigation menu for mobile
+// Toggle mobile menu
 function toggleMenu() {
-  const menu = document.querySelector('.nav-links');
-  menu.classList.toggle('show');
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
 }
 
-// Optional: Add smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - 60,
+        behavior: 'smooth'
+      });
     }
+    // Close menu on mobile after click
+    document.querySelector('.nav-links').classList.remove('active');
   });
-});
-
-// Optional: Example of dynamic button functionality
-document.querySelector('.hero button').addEventListener('click', () => {
-  alert('🚀 Start your free trial today with TrendSniper!');
 });
