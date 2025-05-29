@@ -11,77 +11,113 @@
 
 <header>
   <div class="container">
-    <div class="logo">TrendSniper</div>
+    <div class="logo">
+  <img src="assets/logo.png" alt="TrendSniper Logo">
+    </div>
     <nav class="nav-links">
+      <a href="#why">Why TrendSniper</a>
       <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
 <section class="hero">
   <h1>Find Winning Products Fast</h1>
-  <p>Stop guessing. Start scaling. Discover viral products with ease.</p>
+  <p>Stop guessing. Start scaling. Discover viral products with ease, powered by AI.</p>
   <button>Start Free Trial</button>
+  <img src="assets/hero-laptop.png" alt="Hero Image" class="hero-img">
 </section>
 
-<!-- Image Section: Hero laptop scanning -->
-<section class="image-section">
-  <img src="assets/hero-laptop.png" alt="Laptop scanning a product page" style="width:100%; max-width:800px; margin: 40px auto; display:block; border-radius:12px;">
-</section>
-
-<section id="why-choose">
+<section id="why" class="section why">
   <h2>Why Choose TrendSniper?</h2>
-  <p>Struggling with finding the next big product? Wasting hours on spy tools that don't deliver?</p>
-  <p>TrendSniper solves this with real-time scanning, AI confidence scores, and features competitors can't match. Scale your store faster with less guesswork.</p>
+  <div class="why-container">
+    <div class="problem">
+      <h3>The Problem Dropshippers Face</h3>
+      <ul>
+        <li>❌ Wasting hours hunting for viral products.</li>
+        <li>❌ Testing unproven ads and products.</li>
+        <li>❌ Guesswork ruining profit margins.</li>
+        <li>❌ Unreliable info and sources.</li>
+      </ul>
+    </div>
+    <div class="solution">
+      <h3>How TrendSniper Solves It</h3>
+      <ul>
+        <li>✅ Scan ads instantly with AI analysis.</li>
+        <li>✅ Confidence scores—no more guesswork.</li>
+        <li>✅ Real product images from top platforms.</li>
+        <li>✅ Save & revisit favorites for consistent scaling.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="features">
+<section id="features" class="section features">
   <h2>Key Features</h2>
-  <div class="features">
-    <div class="card"><h3>Scan Viral Ads</h3><p>Identify top ads in seconds with AI analysis.</p></div>
-    <div class="card"><h3>Winning Products</h3><p>Find trending products scored by AI.</p></div>
-    <div class="card"><h3>CSV Export</h3><p>Export your scan results to CSV for sharing.</p></div>
-    <div class="card"><h3>Favorites</h3><p>Save favorite products and ads for later.</p></div>
-    <div class="card"><h3>Leaderboard</h3><p>Track the hottest products with ranking updates.</p></div>
-    <div class="card"><h3>Niche Filters</h3><p>Filter results by niche for precision targeting.</p></div>
-    <div class="card"><h3>Confidence Score</h3><p>AI-powered confidence ratings for product strength.</p></div>
-    <div class="card"><h3>Clean & Simple UI</h3><p>Designed for speed and ease of use with a modern look.</p></div>
+  <div class="feature-cards">
+    <div class="card"><h3>🔍 Scan Viral Ads</h3><p>Find top ads in seconds with AI-powered analysis.</p></div>
+    <div class="card"><h3>🧠 Confidence Scores</h3><p>Know exactly which products & ads are winners.</p></div>
+    <div class="card"><h3>🖼 Real Image Previews</h3><p>View product images from trusted sources.</p></div>
+    <div class="card"><h3>💎 Favorites & History</h3><p>Save & revisit products you love for scaling.</p></div>
   </div>
 </section>
 
-<section class="section" id="testimonials">
+<section id="testimonials" class="section testimonials">
   <h2>What Our Users Say</h2>
-  <div class="testimonials">
-    <div class="card"><p>"TrendSniper helped me find 3 viral products in one week!"</p><div class="stars">★★★★★</div><h4>- Sarah K., Dropshipper</h4></div>
-    <div class="card"><p>"Simple, powerful, and saves me hours. Best $9.99 ever!"</p><div class="stars">★★★★★</div><h4>- David O., Ecom Entrepreneur</h4></div>
-    <div class="card"><p>"Tired of wasting money on spy tools. TrendSniper just works."</p><div class="stars">★★★★★</div><h4>- Jasmine R., Agency Owner</h4></div>
+  <div class="testimonial-cards">
+    <div class="card">
+      <p>"TrendSniper found me 3 viral products in one week!"</p>
+      <div class="stars">★★★★★</div>
+      <h4>- Sarah K., Dropshipper</h4>
+    </div>
+    <div class="card">
+      <p>"Simple, powerful, and saves me hours. Best $9.99 ever!"</p>
+      <div class="stars">★★★★★</div>
+      <h4>- David P., Ecom Entrepreneur</h4>
+    </div>
+    <div class="card">
+      <p>"Tired of wasting money on spy tools. TrendSniper just works."</p>
+      <div class="stars">★★★★★</div>
+      <h4>- Jasmine R., Agency Owner</h4>
+    </div>
   </div>
 </section>
 
-<section class="section pricing" id="pricing">
+<section id="pricing" class="section pricing">
   <h2>Pricing</h2>
-  <div class="features">
+  <div class="plan-cards">
     <div class="plan">
       <h3>Lite</h3><p><s>$10</s> $7.99/mo</p>
-      <ul><li>✅ Scan Viral Ads</li><li>✅ Find Winning Products</li><li>✅ Niche Filters</li></ul>
+      <ul>
+        <li>✔ Scan Ads</li>
+        <li>✔ Winning Products</li>
+        <li>✔ Niche Filters</li>
+      </ul>
       <button>Choose Lite</button>
     </div>
     <div class="plan">
       <h3>Ultimate</h3><p><s>$15</s> $9.99/mo</p>
-      <ul><li>✅ Everything in Lite</li><li>✅ Confidence Score by AI</li><li>✅ CSV Export & Favorites</li><li>✅ Leaderboard Access</li><li>✅ Priority Support</li></ul>
+      <ul>
+        <li>✔ Everything in Lite</li>
+        <li>✔ Confidence Scores</li>
+        <li>✔ CSV Export & Favorites</li>
+        <li>✔ Leaderboard Access</li>
+        <li>✔ Priority Support</li>
+      </ul>
       <button>Choose Ultimate</button>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
-  <h2>FAQ</h2>
-  <div class="features">
-    <div class="faq-item"><h4>How often are products updated?</h4><p>New trends every 24 hours!</p></div>
-    <div class="faq-item"><h4>Can I cancel anytime?</h4><p>Yes, anytime, no contracts.</p></div>
+<section id="faq" class="section faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-cards">
+    <div class="faq-item"><h4>How often are products updated?</h4><p>Every 24 hours!</p></div>
+    <div class="faq-item"><h4>Can I cancel anytime?</h4><p>Yes, no contracts.</p></div>
     <div class="faq-item"><h4>Do I need experience?</h4><p>No! TrendSniper is beginner-friendly.</p></div>
   </div>
 </section>
@@ -89,6 +125,12 @@
 <footer>
   <p>&copy; 2025 TrendSniper. All rights reserved.</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
