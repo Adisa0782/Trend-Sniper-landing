@@ -4,16 +4,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #0e0f1a;
   color: #fff;
   line-height: 1.6;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -23,6 +26,7 @@ a {
   align-items: center;
   padding: 10px 0;
 }
+
 .logo img {
   height: 40px;
 }
@@ -32,16 +36,19 @@ a {
   display: flex;
   gap: 20px;
 }
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
   display: none;
   color: #fff;
 }
+
 .nav-links a {
   color: #fff;
   font-weight: 500;
 }
+
 .nav-links.active {
   display: flex;
   flex-direction: column;
@@ -52,6 +59,7 @@ a {
   padding: 20px;
   border-radius: 8px;
 }
+
 .nav-links.active a {
   padding: 10px 0;
 }
@@ -62,15 +70,18 @@ a {
   padding: 100px 20px;
   background: linear-gradient(135deg, #07142f, #0e1f3d);
 }
+
 .hero h1 {
   font-size: 48px;
   color: #f8f9fa;
   margin-bottom: 20px;
 }
+
 .hero p {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Adjusted spacing */
 }
+
 .hero button {
   background: #ffc107;
   color: #000;
@@ -80,15 +91,19 @@ a {
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
+  display: inline-block;
+  margin-top: 10px;
 }
+
 .hero button:hover {
   background: #ff9800;
   transform: scale(1.05);
 }
+
 .hero-img {
   width: 100%;
   max-width: 600px;
-  margin-top: 30px;
+  margin-top: 40px;
   border-radius: 12px;
 }
 
@@ -97,17 +112,20 @@ a {
   padding: 80px 20px;
   text-align: center;
 }
+
 .section h2 {
   font-size: 36px;
   margin-bottom: 40px;
   color: #ffc107;
 }
+
 .feature-cards, .testimonial-cards, .plan-cards, .faq-cards, .why-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
+
 .card, .plan, .faq-item {
   background: #1c1d2a;
   padding: 20px;
@@ -115,13 +133,12 @@ a {
   width: 280px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-.card h3 {
+
+.card h3, .plan h3 {
   color: #ffc107;
   margin-bottom: 10px;
 }
-.plan h3 {
-  color: #ffc107;
-}
+
 button {
   background: #ffc107;
   color: #000;
@@ -132,6 +149,7 @@ button {
   font-weight: 600;
   transition: 0.3s;
 }
+
 button:hover {
   background: #ff9800;
 }
@@ -141,26 +159,41 @@ button:hover {
   .nav-links {
     display: none;
   }
+
   .menu-icon {
     display: block;
   }
+
+  .hero {
+    text-align: center;
+    flex-direction: column;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
+
   .hero p {
     font-size: 16px;
   }
+
   .hero button {
     padding: 12px 24px;
     font-size: 16px;
   }
+
   .feature-cards, .testimonial-cards, .plan-cards, .faq-cards, .why-container {
     flex-direction: column;
     align-items: center;
   }
+
+  .hero-img {
+    max-width: 100%;
+    margin-top: 30px;
+  }
 }
 
-/* Desktop Specific Styles */
+/* Desktop Specific Layout */
 @media (min-width: 769px) {
   .container {
     justify-content: space-between;
@@ -168,17 +201,13 @@ button:hover {
   }
 
   .nav-links {
-    display: flex !important; /* Always show nav links on desktop */
+    display: flex !important;
     justify-content: flex-end;
     gap: 20px;
   }
 
   .menu-icon {
-    display: none; /* Hide menu icon on desktop */
-  }
-
-  .nav-links a {
-    padding: 0 10px;
+    display: none;
   }
 
   .hero {
@@ -187,6 +216,7 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     text-align: left;
+    padding: 120px 50px;
   }
 
   .hero h1 {
@@ -197,8 +227,12 @@ button:hover {
     font-size: 20px;
   }
 
+  .hero button {
+    margin-top: 20px;
+  }
+
   .hero-img {
     max-width: 50%;
     margin-top: 0;
   }
-    }
+  }
